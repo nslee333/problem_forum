@@ -5,7 +5,7 @@ import Posts from "./components/Posts";
 
 function App() {
   return (
-    <div className="min-h-[100vh] border">
+    <div className="min-h-[100vh] ">
       <Header />
       <Posts />
       <Footer />

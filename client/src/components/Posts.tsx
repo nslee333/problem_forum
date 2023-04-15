@@ -1,96 +1,12 @@
-import up_arrow from "../assets/up_arrow.png"
-import down_arrow from "../assets/down_arrow.png"
-import green_up_arrow from "../assets/green_up_arrow.png"
-import green_down_arrow from "../assets/green_down_arrow.png"
-
-
+import up_arrow from "../assets/up_arrow.png";
+import down_arrow from "../assets/down_arrow.png";
+import green_up_arrow from "../assets/green_up_arrow.png";
+import green_down_arrow from "../assets/green_down_arrow.png";
+import { returnArr, array } from "../types/types";
+import { useState } from "react";
 
 export default function Posts() {
-  const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  // const array: number[] = [
-  // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-  // 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  // 23, 24, 25, 26, 27, 28, 29, 30
-  // ];
-
-  type returnObject = {
-    postId: number;
-    title: string;
-    upvoteCount: number;
-  };
-
-  const returnArr: returnObject[] = [
-    {
-      postId: 0,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 132,
-    },
-    {
-      postId: 1,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 120,
-    },
-    {
-      postId: 2,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 100,
-    },
-    {
-      postId: 3,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 84,
-    },
-    {
-      postId: 4,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 32,
-    },
-    {
-      postId: 5,
-      title: "Alert system for AWS charges.",
-      upvoteCount: 3,
-    },
-    // {
-    //   postId: 2,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 100,
-    // },
-    // {
-    //   postId: 3,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 84,
-    // },
-    // {
-    //   postId: 4,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 32,
-    // },
-    // {
-    //   postId: 5,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 3,
-    // },
-    // {
-    //   postId: 2,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 100,
-    // },
-    // {
-    //   postId: 3,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 84,
-    // },
-    // {
-    //   postId: 4,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 32,
-    // },
-    // {
-    //   postId: 5,
-    //   title: "Alert system for AWS charges.",
-    //   upvoteCount: 3,
-    // },
-  ];
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   const posts = returnArr.map((object, index) => {
     return (
@@ -113,30 +29,40 @@ export default function Posts() {
                     
                     "
         >
-          <div className="
+          {loggedIn ? (
+            <div
+              className="
                           mx-1 
-                          bg-[#3A3A3A] 
-                            
+                          w-[1.5rem] 
                           min-w-[1rem] 
-                          w-[1.5rem]
                           max-w-[5rem]
+                          bg-[#3A3A3A]
                           
                           "
-          >
-            <img src={up_arrow} className="bg-[#3A3A3A] ]"/>
-            <img src={down_arrow} className="bg-[#3A3A3A] "/>
-          </div>
-          <div className='bg-[#3A3A3A] '>
-            <div className=" 
+            >
+              <button>
+                <img src={green_up_arrow} className=" bg-[#3A3A3A]" />
+              </button>
+              <button>
+                <img src={green_down_arrow} className=" bg-[#3A3A3A] " />
+              </button>
+            </div>
+          ) : (
+            <></>
+          )}
+          <div className="bg-[#3A3A3A] ">
+            <div
+              className=" 
                           mx-1 
-                          bg-[#3A3A3A] 
+                          min-w-[2rem] 
                             
-                          min-w-[2rem]
+                          bg-[#3A3A3A]
                           "
             >
               {returnArr[index].title}
             </div>
-            <div className="
+            <div
+              className="
                             mx-1 
                             bg-[#3A3A3A] 
                             xs:text-[9px]
@@ -171,7 +97,7 @@ export default function Posts() {
                   sm:min-h-[80vh]
                   sm:pl-3
                   sm:pt-3
-
+                  
                   "
       >
         <div className="bg-[#3A3A3A]">{posts}</div>

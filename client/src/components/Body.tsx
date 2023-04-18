@@ -1,4 +1,4 @@
-export default function Body() {
+export default function Body(): JSX.Element {
   return (
     <>
       <div

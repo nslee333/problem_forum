@@ -5,10 +5,10 @@ import green_down_arrow from "../assets/green_down_arrow.png";
 import { returnArr, array } from "../types/types";
 import { useState } from "react";
 
-export default function Posts() {
+export default function Posts(): JSX.Element[] {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
-  const posts = returnArr.map((object, index) => {
+  const posts: JSX.Element[] = returnArr.map((object, index) => {
     return (
       <a key={returnArr[index].postId} href="/" className="">
         <div

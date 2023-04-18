@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="min-h-[100vh] ">
       <Header />
-      <Body />
+      <Body>
+        
+      </Body>
       <Footer />
     </div>
   );

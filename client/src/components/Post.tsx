@@ -30,7 +30,27 @@ function PostContent() {
   );
 }
 
-function PostDiscussion() {
+const array = []
+
+
+function BuildComments() {
+
+// ! Stopped at trying to 
+
+
+
+
+  return (
+    <>
+
+    </>
+  );
+}
+
+
+
+
+function PostComments() {
   return (
     <>
       <div
@@ -49,7 +69,12 @@ function PostDiscussion() {
                     
                     "
       >
-        <div className="bg-[#3A3A3A] p-5 text-white">Discussion</div>
+        <div className="bg-[#3A3A3A] p-5 text-white">
+          
+          Discussion
+          
+          
+        </div>
       </div>
     </>
   );
@@ -59,7 +84,7 @@ export default function Post(): JSX.Element {
   return (
     <>
       <div className="flex justify-center">{PostContent()}</div>
-      <div className="flex justify-center">{PostDiscussion()}</div>
+      <div className="flex justify-center">{PostComments()}</div>
     </>
   );
 }

@@ -1,12 +1,7 @@
 export default function Login() {
   return (
     <>
-      <div
-        className="
-                  flex
-                  justify-center 
-                  "
-      >
+      <div className="flex justify-center">
         <div
           className="
                     my-2
@@ -45,7 +40,7 @@ export default function Login() {
 
                 <label className="mt-2 bg-[#3A3A3A]">Password</label>
                 <input
-                  className="mt-2 mb-1 rounded bg-[#4A4A4A] p-1"
+                  className="mb-1 mt-2 rounded bg-[#4A4A4A] p-1"
                   type="password"
                   placeholder="..."
                 />

@@ -1,14 +1,56 @@
 export type Comment = {
   commentId: number;
-  date: Date;
+  date: number;
   content: string;
-  hasChildren: boolean; // * Is this needed?
-  child: Comment;
-
-  // ! Stopped at modeling comment type to mock data for Post.tsx.
-
+  child: Comment[] | null;
 }
 
+
+const currentDate: number = Date.now();
+
+export const CommentArray: Comment[] = [
+  {
+    commentId: 0,
+    date: currentDate,
+    content: "Hello world!",
+    child: null
+  },
+  {
+    commentId: 0,
+    date: currentDate,
+    content: "Hello world!",
+    child: null
+  },
+  {
+    commentId: 0,
+    date: currentDate,
+    content: "Hello world!",
+    child: null
+  },
+  {
+    commentId: 0,
+    date: currentDate,
+    content: "Hello world!",
+    child: null
+  },
+  {
+    commentId: 0,
+    date: currentDate,
+    content: "Hello world!",
+    child: null
+  },
+];
+
+
+
+
+
+
+
+
+
+
+export const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 
 export type PostObject = {

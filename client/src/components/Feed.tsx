@@ -2,15 +2,15 @@ import up_arrow from "../assets/up_arrow.png";
 import down_arrow from "../assets/down_arrow.png";
 import green_up_arrow from "../assets/green_up_arrow.png";
 import green_down_arrow from "../assets/green_down_arrow.png";
-import { returnArr, array } from "../types/types";
+import { postArr, array } from "../types/types";
 import { useState } from "react";
 
 export default function Feed(): JSX.Element {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
-  const posts: JSX.Element[] = returnArr.map((object, index) => {
+  const posts: JSX.Element[] = postArr.map((object, index) => {
     return (
-      <a key={returnArr[index].postId} href="/" className="">
+      <a key={postArr[index].postId} href="/" className="">
         <div
           className="
                     justify-left
@@ -59,7 +59,7 @@ export default function Feed(): JSX.Element {
                           bg-[#3A3A3A]
                           "
             >
-              {returnArr[index].title}
+              {postArr[index].title}
             </div>
             <div
               className="
@@ -69,7 +69,7 @@ export default function Feed(): JSX.Element {
                             sm:text-sm
                             "
             >
-              {returnArr[index].upvoteCount} upvotes
+              {postArr[index].upvoteCount} upvotes
             </div>
           </div>
         </div>

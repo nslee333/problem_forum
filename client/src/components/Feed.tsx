@@ -5,7 +5,7 @@ import green_down_arrow from "../assets/green_down_arrow.png";
 import { returnArr, array } from "../types/types";
 import { useState } from "react";
 
-export default function Posts(): JSX.Element {
+export default function Feed(): JSX.Element {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   const posts: JSX.Element[] = returnArr.map((object, index) => {

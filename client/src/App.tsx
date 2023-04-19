@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Posts from "./components/Posts";
+import Feed from "./components/Feed";
 import Login from "./components/Login";
 import About from "./components/About";
 

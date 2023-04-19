@@ -4,12 +4,16 @@ import Footer from "./components/Footer";
 import Feed from "./components/Feed";
 import Login from "./components/Login";
 import About from "./components/About";
+import Post from "./components/Post";
 
 function App() {
   return (
     <div className="min-h-[100vh] ">
       <Header />
-        <About />
+        <Post />
+        {/* <Login /> */}
+        {/* <Feed /> */}
+        {/* <About /> */}
       <Footer />
     </div>
   );

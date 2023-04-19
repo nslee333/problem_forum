@@ -5,7 +5,7 @@ import green_down_arrow from "../assets/green_down_arrow.png";
 import { returnArr, array } from "../types/types";
 import { useState } from "react";
 
-export default function Posts(): JSX.Element[] {
+export default function Posts(): JSX.Element {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 
   const posts: JSX.Element[] = returnArr.map((object, index) => {
@@ -77,5 +77,35 @@ export default function Posts(): JSX.Element[] {
     );
   });
 
-  return (posts);
+  return (
+    <>
+      <div
+        className="
+                  flex 
+                  justify-center 
+                  "
+      >
+        <div
+          className="
+                    my-2
+                    h-auto
+                    w-[48rem] 
+                    overflow-auto 
+                    rounded-md 
+                    bg-[#3A3A3A] 
+                    xs:min-h-[75vh]
+                    xs:p-2
+                    sm:min-h-[80vh]
+                    sm:pl-3
+                    sm:pt-3
+                    
+                    "
+        >
+          <div className="bg-[#3A3A3A] text-white">
+          {posts}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

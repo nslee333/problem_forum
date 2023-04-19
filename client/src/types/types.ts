@@ -1,7 +1,23 @@
-export type returnObject = {
+export type Comment = {
+  commentId: number;
+  date: Date;
+  content: string;
+  hasChildren: boolean; // * Is this needed?
+  child: Comment;
+
+  // ! Stopped at modeling comment type to mock data for Post.tsx.
+
+}
+
+
+
+export type PostObject = {
   postId: number;
+  date: Date;
   title: string;
   upvoteCount: number;
+  content: string;
+  comments: Comment[]
 };
 
 export const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -12,7 +28,7 @@ export const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // ];
 
 
-export const returnArr: returnObject[] = [
+export const postArr: PostObject[] = [
   {
     postId: 0,
     title: "Alert system for AWS charges.",

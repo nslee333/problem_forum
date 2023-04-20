@@ -1,5 +1,6 @@
 export type Comment = {
   commentId: number;
+  user: string;
   date: number;
   content: string;
   child: Comment[] | null;
@@ -11,43 +12,40 @@ const currentDate: number = Date.now();
 export const CommentArray: Comment[] = [
   {
     commentId: 0,
+    user: "nslee333",
     date: currentDate,
     content: "Hello world!",
     child: null
   },
   {
     commentId: 0,
+    user: "nslee333",
     date: currentDate,
     content: "Hello world!",
     child: null
   },
   {
     commentId: 0,
+    user: "nslee333",
     date: currentDate,
     content: "Hello world!",
     child: null
   },
   {
     commentId: 0,
+    user: "nslee333",
     date: currentDate,
     content: "Hello world!",
     child: null
   },
   {
     commentId: 0,
+    user: "nslee333",
     date: currentDate,
     content: "Hello world!",
     child: null
   },
 ];
-
-
-
-
-
-
-
-
 
 
 export const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];

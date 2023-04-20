@@ -1,3 +1,7 @@
+import { CommentArray } from "../types/types";
+
+
+
 function PostContent() {
   return (
     <>
@@ -35,14 +39,22 @@ const array = []
 
 function BuildComments() {
 
-// ! Stopped at trying to 
+const posts = CommentArray.map((object, index) => {
+  return (
+    <>
+      <div>
+        
+      </div>
+    </>
+  );
+}) 
 
 
 
 
   return (
     <>
-
+      
     </>
   );
 }
